@@ -6,7 +6,7 @@ DEFINES += LIB_HASH_LIBRARY_LIBRARY
 SOURCES += src/crc32.cpp
 HEADERS += inc/hash_library/crc32.h
 
-SOURCES += src/digest.cpp
+#SOURCES += src/digest.cpp
 
 HEADERS += inc/hash_library/hash.h
 
