@@ -13,7 +13,7 @@ HEADERS += inc/hash_library/hash.h
 HEADERS += inc/hash_library/hmac.h
 
 SOURCES += src/keccak.cpp
-HEADERS += hash_library/keccak.h
+HEADERS += inc/hash_library/keccak.h
 
 SOURCES += src/md5.cpp
 HEADERS += inc/hash_library/md5.h
