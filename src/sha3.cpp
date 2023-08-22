@@ -11,7 +11,7 @@
 #include "hash_library/sha3.h"
 
 // big endian architectures need #define __BYTE_ORDER __BIG_ENDIAN
-#ifndef _MSC_VER
+#if !defined(_MSC_VER) && !defined(TP_OSX)
 #include <endian.h>
 #endif
 
@@ -58,6 +58,7 @@ namespace
     return (x << numBits) | (x >> (64 - numBits));
   }
 
+#if defined(__BYTE_ORDER) && (__BYTE_ORDER != 0) && (__BYTE_ORDER == __BIG_ENDIAN)
   /// convert litte vs big endian
   inline uint64_t swap(uint64_t x)
   {
@@ -77,6 +78,7 @@ namespace
            ((x << 40) & 0x00FF000000000000ULL) |
             (x << 56);
   }
+#endif
 
 
   /// return x % 5 for 0 <= x <= 9

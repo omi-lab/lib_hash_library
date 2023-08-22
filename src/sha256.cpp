@@ -11,7 +11,7 @@
 #include "hash_library/sha256.h"
 
 // big endian architectures need #define __BYTE_ORDER __BIG_ENDIAN
-#ifndef _MSC_VER
+#if !defined(_MSC_VER) && !defined(TP_OSX)
 #include <endian.h>
 #endif
 

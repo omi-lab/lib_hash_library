@@ -10,7 +10,7 @@
 
 #include "hash_library/md5.h"
 
-#ifndef _MSC_VER
+#if !defined(_MSC_VER) && !defined(TP_OSX)
 #include <endian.h>
 #endif
 
