@@ -279,7 +279,7 @@ void MD5::processBuffer()
   paddedLength /= 8;
 
   // only needed if additional data flows over into a second block
-  unsigned char extra[BlockSize];
+  unsigned char extra[BlockSize*4];
 
   // append a "1" bit, 128 => binary 10000000
   if (m_bufferSize < BlockSize)
